@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-nunito bg-[#FAF8F3] text-[#2C2C3E] dark:bg-[#0F1120] dark:text-[#CBD5E1];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-cormorant tracking-tight text-[#1B1F3B] dark:text-white;
+  }
+}
