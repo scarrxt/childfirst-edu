@@ -1,0 +1,74 @@
+# Childfirst Educational Consult
+
+A production-ready, fully responsive static website for Childfirst Educational Consult by Mrs. Ebele Iwogbe. The site highlights services, books, resources, testimonials, and contact options with a calm, child-first visual direction and a dark mode toggle.
+
+## Overview
+- Purpose: Showcase educational consulting services and make it easy to book sessions and order books.
+- Audience: Parents, caregivers, teachers, and school leaders.
+- Experience: Clean, calm, and readable with strong typography and clear calls to action.
+
+## Features
+- Responsive layout for mobile, tablet, and desktop
+- Dark mode toggle with persistence in localStorage
+- Sticky navbar with smooth scroll anchors and mobile menu
+- Scroll reveal animation on sections
+- Structured data sources for services, books, blog posts, and testimonials
+- Accessible semantic HTML and focus-friendly controls
+
+## Tech Stack
+- React 18 + TypeScript (strict)
+- Vite
+- Tailwind CSS v3 (dark mode via class)
+- Google Fonts: Cormorant Garamond and Nunito
+
+## Getting Started
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+- src/App.tsx: Root layout and section ordering
+- src/main.tsx: App entry
+- src/index.css: Tailwind directives and base styles
+- src/hooks/useDarkMode.ts: Dark mode state and persistence
+- src/hooks/useRevealOnScroll.ts: Section reveal animation
+- src/components: UI sections and layout
+- src/data: Content for services, books, blog posts, and testimonials
+
+## Content Updates
+Edit the data files to update content without touching layout:
+- src/data/services.ts
+- src/data/books.ts
+- src/data/blogPosts.ts
+- src/data/testimonials.ts
+
+To change contact details, update the WhatsApp link and email in the components and data entries.
+
+## Accessibility Notes
+- Semantic sections (nav, main, section, footer)
+- Text contrast tuned for light and dark themes
+- Buttons and icons include aria-labels
+- External links include rel="noopener noreferrer"
+
+## License
+This project is provided for the Childfirst Educational Consult website. Add a formal license if you plan to open-source it.
