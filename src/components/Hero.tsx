@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
+const profilePhoto = new URL("../../assets/pfp.png", import.meta.url).href;
+
 export const Hero = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const isVisible = useRevealOnScroll(sectionRef);
@@ -81,13 +83,17 @@ export const Hero = () => {
           <div
             className={`relative w-full max-w-sm ${transitionBase} ${revealClass} delay-200`}
           >
-            <div className="rounded-3xl bg-white p-10 text-center shadow-2xl dark:bg-[#1A1D35]">
-              <div className="text-7xl" role="img" aria-label="Consultant portrait placeholder">
-                👩🏽‍🏫
+            <div className="overflow-hidden rounded-3xl bg-white text-center shadow-2xl dark:bg-[#1A1D35]">
+              <img
+                src={profilePhoto}
+                alt="Mrs. Ebele Iwogbe portrait"
+                className="h-64 w-full object-cover"
+              />
+              <div className="px-6 py-5">
+                <p className="text-sm text-[#6B6B80] dark:text-[#64748B]">
+                  Child-first guidance and care
+                </p>
               </div>
-              <p className="mt-4 text-sm text-[#6B6B80] dark:text-[#64748B]">
-                Child-first guidance and care
-              </p>
             </div>
 
             <div className="absolute -top-6 -left-8 rounded-2xl bg-white px-4 py-3 text-xs shadow-lg animate-bounce-slow dark:bg-[#1A1D35]">

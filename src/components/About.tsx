@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { useRevealOnScroll } from "../hooks/useRevealOnScroll";
 
+const profilePhoto = new URL("../../assets/pfp.png", import.meta.url).href;
+
 const tags = [
   "Child Psychology",
   "Published Author",
@@ -25,13 +27,17 @@ export const About = () => {
     >
       <div className="mx-auto grid w-full max-w-6xl gap-16 px-6 lg:grid-cols-2">
         <div className={`relative ${transitionBase} ${revealClass} delay-100`}>
-          <div className="rounded-3xl bg-[#F4F1E8] p-10 text-center shadow-xl dark:bg-[#1E1B4B]">
-            <div className="text-7xl" role="img" aria-label="Mrs. Ebele Iwogbe portrait">
-              👩🏽‍🏫
+          <div className="overflow-hidden rounded-3xl bg-[#F4F1E8] shadow-xl dark:bg-[#1E1B4B]">
+            <img
+              src={profilePhoto}
+              alt="Mrs. Ebele Iwogbe portrait"
+              className="h-64 w-full object-cover md:h-72"
+            />
+            <div className="px-6 py-5 text-center">
+              <p className="text-sm text-[#6B6B80] dark:text-[#CBD5E1]">
+                Mrs. Ebele Iwogbe
+              </p>
             </div>
-            <p className="mt-4 text-sm text-[#6B6B80] dark:text-[#CBD5E1]">
-              Mrs. Ebele Iwogbe
-            </p>
           </div>
           <div className="absolute -top-4 left-6 rounded-full bg-[#F59E0B] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white">
             10+ Years

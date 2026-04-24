@@ -78,9 +78,39 @@ export const Navbar = ({ isDark, onToggle }: NavbarProps) => {
             type="button"
             aria-label="Toggle dark mode"
             onClick={onToggle}
-            className="ml-3 flex h-9 w-9 items-center justify-center rounded-full border border-[#E8E3D8] text-lg transition hover:border-[#5B6EF5] dark:border-[#2D3155]"
+            className="ml-3 flex h-9 w-9 items-center justify-center rounded-full border border-[#E8E3D8] transition hover:border-[#5B6EF5] dark:border-[#2D3155]"
           >
-            {isDark ? "☀️" : "🌙"}
+            {isDark ? (
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 text-[#F59E0B]"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+                <path
+                  d="M12 2V5M12 19V22M4.22 4.22L6.34 6.34M17.66 17.66L19.78 19.78M2 12H5M19 12H22M4.22 19.78L6.34 17.66M17.66 6.34L19.78 4.22"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 text-[#5B6EF5]"
+                fill="none"
+              >
+                <path
+                  d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
           </button>
         </div>
 
@@ -89,9 +119,39 @@ export const Navbar = ({ isDark, onToggle }: NavbarProps) => {
             type="button"
             aria-label="Toggle dark mode"
             onClick={onToggle}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E8E3D8] text-lg transition hover:border-[#5B6EF5] dark:border-[#2D3155]"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E8E3D8] transition hover:border-[#5B6EF5] dark:border-[#2D3155]"
           >
-            {isDark ? "☀️" : "🌙"}
+            {isDark ? (
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 text-[#F59E0B]"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+                <path
+                  d="M12 2V5M12 19V22M4.22 4.22L6.34 6.34M17.66 17.66L19.78 19.78M2 12H5M19 12H22M4.22 19.78L6.34 17.66M17.66 6.34L19.78 4.22"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 text-[#5B6EF5]"
+                fill="none"
+              >
+                <path
+                  d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
           </button>
           <button
             type="button"
